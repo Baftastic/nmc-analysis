@@ -197,13 +197,19 @@
     li { margin: 6px 0; }
 
     .pill {
-      display: inline-block;
-      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;                 /* Match the button height */
+      padding: 0 18px;              /* Symmetric horizontal padding */
       border-radius: 999px;
-      font-size: 12px;
+      font-size: 1rem;
       border: 1px solid var(--bd-soft);
       color: var(--txt-1);
-      background: rgba(102,217,239,0.08);
+      background: rgba(102,217,239,0.10); /* subtle background */
+      font-weight: 500;
+      box-sizing: border-box;
+      margin-left: 8px;
     }
     .pill.warn {
       background: rgba(244,63,94,0.12);
@@ -211,7 +217,7 @@
       color: #ffc0cb;
     }
     .pill.ok {
-      background: rgba(52,211,153,0.12);
+      background: rgba(52,211,153,0.18);
       border-color: rgba(52,211,153,0.35);
       color: #c9ffe7;
     }
@@ -384,7 +390,7 @@
           <!-- You can replace with actual icon SVGs if desired -->
           ⬇️ Download PDF
         </a>
-        <a class="button" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener">
+        <a class="btn primary" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener" role="button" aria-label="View PDF in browser">
           👁️ View in browser
         </a>
         <span class="pill ok">Updated: 2025‑08‑21</span>
