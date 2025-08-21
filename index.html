@@ -1,58 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>N‑Methyl‑Cyclazodone (NMC) – Human Use Analysis, Methods, and Notes</title>
-  <meta name="description" content="Concise analysis of N‑Methyl‑Cyclazodone (NMC): analytical methods (HPLC‑UV, LC‑MS), purity reporting caveats, safety/legal notes, and a downloadable PDF.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Tamás Arany">
-  <link rel="canonical" href="https://baftastic.github.io/nmc-analysis/">
-  <meta property="og:title" content="N‑Methyl‑Cyclazodone (NMC) – Human Use Analysis">
-  <meta property="og:description" content="Overview, methods, purity notes, and downloadable PDF.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://baftastic.github.io/nmc-analysis/">
+  <meta charset="utf-8" />
+  <title>N‑Methyl‑Cyclazodone (NMC): Pharmacological & Toxicological Assessment | Gemini Deep Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Concise overview of N‑Methyl‑Cyclazodone (NMC): identity/purity methods, inferred pharmacology, major risks (idiosyncratic hepatotoxicity), acute toxicity case, legal context, and download of the full Gemini Deep Research PDF." />
+  <meta name="author" content="Gemini Deep Research" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="N‑Methyl‑Cyclazodone (NMC) Assessment | Gemini Deep Research" />
+  <meta property="og:description" content="Evidence-based overview of NMC with methods, risks, legal context, and full PDF download by Gemini Deep Research." />
+  <meta property="og:site_name" content="Gemini Deep Research" />
+  <!-- Optional: add an image hosted in your repo -->
+  <!-- <meta property="og:image" content="https://<your-domain>/assets/og-image.png" /> -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="N‑Methyl‑Cyclazodone (NMC) Assessment" />
+  <meta name="twitter:description" content="Concise overview and full report by Gemini Deep Research." />
+
+  <link rel="canonical" href="https://baftastic.github.io/nmc-analysis/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://baftastic.github.io/nmc-analysis/sitemap.xml" />
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;max-width:840px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1b1b1b}
-    header h1{font-size:1.8rem;margin:0 0 .25rem}
-    header p{margin:.25rem 0;color:#555}
-    a{color:#0b57d0}
-    .btn{display:inline-block;background:#0b57d0;color:#fff;padding:.6rem .9rem;border-radius:6px;text-decoration:none}
-    .muted{color:#666}
-    footer{margin-top:3rem;font-size:.9rem;color:#666}
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --bg: #fff;
+      --accent: #0b5fff;
+      --accent-contrast: #fff;
+      --warn-bg: #fff3f3;
+      --warn-border: #e53935;
+      --card: #f8f9fb;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    header {
+      padding: 3rem 1rem 1rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .byline {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+    main {
+      padding: 1rem;
+      max-width: 860px;
+      margin: 0 auto 3rem;
+    }
+    section {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin: .25rem 0 .75rem;
+    }
+    ul {
+      margin: .5rem 0 .5rem 1.25rem;
+    }
+    li {
+      margin: .35rem 0;
+    }
+    .warn {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: #b71c1c;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .85rem;
+    }
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-contrast);
+      padding: .75rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: .75rem;
+    }
+    .small {
+      font-size: .95rem;
+      color: var(--muted);
+    }
+    footer {
+      border-top: 1px solid #eee;
+      padding: 1.5rem 1rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>N‑Methyl‑Cyclazodone (NMC) – Human Use Analysis</h1>
-    <p class="muted">Version 1.0 • August 2025 • Author: Tamás Arany</p>
+    <h1>N‑Methyl‑Cyclazodone (NMC)</h1>
+    <div class="byline">A pharmacological and toxicological assessment • By <strong>Gemini Deep Research</strong></div>
+    <p class="lede">Concise overview of a novel psychoactive stimulant analogue of Cyclazodone. Includes analytical methods, inferred mechanism, key risks, legal context, and link to the full report.</p>
   </header>
 
   <main>
-    <p>This page provides a concise overview and link to the full PDF report analyzing N‑Methyl‑Cyclazodone (NMC), with notes on identity/purity testing and methodological considerations.</p>
+    <section class="warn">
+      <h2>Critical safety notice</h2>
+      <p>
+        N‑Methyl‑Cyclazodone (NMC) may pose a risk of severe, idiosyncratic hepatotoxicity consistent with its oxazolidinone class lineage (e.g., pemoline). Acute toxicity has included multi‑system effects in a documented case. Content is provided for research and public health awareness; it is not medical advice.
+      </p>
+    </section>
 
-    <p><a class="btn" href="https://drive.google.com/file/d/1nCQTXm_QMPRTzw3tFWewJ-kx7ZlAHubU/view?usp=sharing" rel="noopener">Download the PDF</a></p>
+    <section>
+      <h2>Executive highlights</h2>
+      <ul>
+        <li>Compound: N‑Methyl‑Cyclazodone (NMC), an oxazolidinone stimulant and analogue of Cyclazodone.</li>
+        <li>Use context: Discussed online as a functional stimulant/nootropic; unscheduled “research chemical” status in many jurisdictions.</li>
+        <li>Mechanism (inferred): Catecholaminergic stimulant activity involving DAT/NET reuptake inhibition and/or release; N‑demethylation to Cyclazodone observed in human case analysis.</li>
+        <li>Primary risk: Potential for rare but severe, unpredictable liver injury (idiosyncratic hepatotoxicity), analogous to pemoline’s risk profile.</li>
+        <li>Acute toxicity: Documented overdose presented with severe sympathomimetic features, neurological toxicity (choreoathetosis), ECG conduction abnormalities, rhabdomyolysis, and acute liver injury.</li>
+        <li>Interactions: Likely CYP-mediated metabolism; inhibitors (e.g., certain antidepressants) may elevate exposure and risk.</li>
+        <li>Legal context: Often unscheduled but may fall under analogue/psychoactive laws; monitored within EU EWS; UK covers under Psychoactive Substances Act.</li>
+      </ul>
+    </section>
 
-    <h2>Abstract</h2>
-    <p>TODO: Add a short 3–5 sentence abstract summarizing scope, key terms (N‑Methyl‑Cyclazodone, NMC, cyclazodone analogue), and what readers will learn.</p>
+    <section>
+      <h2>Scope and limitations</h2>
+      <p class="small">
+        This page summarizes the accompanying PDF report. Where formal data are lacking, pharmacology and risks are inferred from structural analogues and SAR principles. The substance is insufficiently characterized in controlled studies; conclusions may evolve as new data emerge.
+      </p>
+    </section>
 
-    <h2>Contents</h2>
-    <ul>
-      <li>Analytical approach (HPLC‑UV for purity; LC‑MS for identity)</li>
-      <li>Purity reporting caveats (UV % area vs. assay by weight)</li>
-      <li>Notes on legal/safety context and limitations</li>
-      <li>References and related materials</li>
-    </ul>
+    <section class="grid">
+      <div>
+        <h2>Analytical methods</h2>
+        <ul>
+          <li>Identity: LC‑MS</li>
+          <li>Purity: HPLC‑UV</li>
+          <li>Purity caveat: “% area by UV” differs from assay by weight; vendor claims may not reflect absolute content.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Identifiers</h2>
+        <ul>
+          <li>Common names: N‑Methyl‑Cyclazodone, NMC</li>
+          <li>CAS: 14461‑92‑8</li>
+          <li>PubChem CID: 156614124</li>
+          <li>Class: 5‑phenyl‑4‑oxazolidinone stimulant</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Reference identifiers</h2>
-    <p>Common names: N‑Methyl‑Cyclazodone, NMC<br>
-    Example registry: PubChem CID 156614124</p>
+    <section>
+      <h2>Legal and safety context (brief)</h2>
+      <p class="small">
+        NMC is generally not explicitly scheduled in many jurisdictions but may be controlled under analogue or psychoactive-substance laws. EU Early Warning System has recorded related notifications; the UK’s Psychoactive Substances Act broadly prohibits supply for human consumption. Availability, labeling, and compliance vary. This report does not provide legal advice.
+      </p>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Author: Tamás Arany • Email: pharmacology@catom.dev</p>
+    <section>
+      <h2>Download the full report (PDF)</h2>
+      <p>
+        The PDF provides detailed pharmacology, toxicology, case analysis, SAR rationale, and regulatory review.
+      </p>
+      <p>
+        <a class="button" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" download>Download PDF</a>
+        <a class="button" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener">View in browser</a>
+      </p>
+      <p class="small">
+        Title: N‑Methyl‑Cyclazodone: A Pharmacological and Toxicological Assessment of a Novel Psychoactive Stimulant<br/>
+        Version: 1.0 • Last updated: 2025‑08‑21<br/>
+        Author: Tamás Arany • Gemini Deep Research • Contact: pharmacology@catom.dev
+      </p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Tamás Arany • This site hosts informational material and a downloadable PDF.</p>
+    <div>© <span id="year"></span> Gemini Deep Research. All rights reserved.</div>
+    <div class="small">This page is for research and educational purposes only. No medical or legal advice is provided.</div>
+    <!-- Optional: link to sitemap -->
+    <!-- <div class="small"><a href="/nmc-analysis/sitemap.xml">Sitemap</a></div> -->
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
