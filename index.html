@@ -1,257 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  
-  <!-- Updated title and meta description for SEO -->
-  <title>N‑Methyl‑Cyclazodone (NMC) Assessment: Pharmacology, Toxicology, Legal Context | Gemini Deep Research</title>
-  <meta name="description" content="Evidence‑based overview of N‑Methyl‑Cyclazodone (NMC): LC‑MS and HPLC‑UV methods, inferred catecholaminergic mechanism, hepatotoxicity risk, acute toxicity case, legal status, and full PDF by Gemini Deep Research." />
-  <meta name="author" content="Gemini Deep Research" />
-  
-  <!-- Search engine verification placeholders - replace with actual tokens -->
-  <meta name="google-site-verification" content="GOOGLE_VERIFY_TOKEN" />
-  <meta name="msvalidate.01" content="BING_VERIFY_TOKEN" />
-  
-  <!-- Canonical link -->
-  <link rel="canonical" href="https://baftastic.github.io/nmc-analysis/" />
-  
-  <!-- Open Graph and Twitter meta tags -->
-  <meta property="og:title" content="N‑Methyl‑Cyclazodone (NMC) Assessment | Gemini Deep Research" />
-  <meta property="og:description" content="Concise scientific overview, safety warnings, and full PDF report by Gemini Deep Research." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://baftastic.github.io/nmc-analysis/" />
-  <!-- Add an og:image URL if available -->
-  <!-- <meta property="og:image" content="https://baftastic.github.io/nmc-analysis/assets/og-image.png" /> -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="N‑Methyl‑Cyclazodone (NMC) Assessment" />
-  <meta name="twitter:description" content="Overview and full report by Gemini Deep Research." />
-
-  <!-- JSON-LD structured data to reinforce organization and website info -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Gemini Deep Research",
-    "url":"https://baftastic.github.io/nmc-analysis/",
-    "contactPoint":[{"@type":"ContactPoint","email":"pharmacology@catom.dev","contactType":"customer service"}]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"N‑Methyl‑Cyclazodone (NMC) Assessment",
-    "url":"https://baftastic.github.io/nmc-analysis/",
-    "publisher":{"@type":"Organization","name":"Gemini Deep Research"}
-  }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>N‑Methyl‑Cyclazodone (NMC) • Pharmacological and Toxicological Assessment</title>
+  <meta name="color-scheme" content="dark light">
 
   <style>
     :root {
-      --text: #1a1a1a;
-      --muted: #555;
-      --bg: #fff;
-      --accent: #0b5fff;
-      --accent-contrast: #fff;
-      --warn-bg: #fff3f3;
-      --warn-border: #e53935;
-      --card: #f8f9fb;
+      /* Base dark theme */
+      --bg-0: #0f1115;
+      --bg-1: #13161c;
+      --bg-2: #1a1f27;
+      --bg-card: #171a21;
+      --elev-1: 0 6px 20px rgba(0,0,0,0.35);
+
+      /* Text */
+      --txt-0: #e9edf1;
+      --txt-1: #c9d1d9;
+      --txt-2: #9aa4b2;
+      --muted: #7f8a99;
+
+      /* Accent palette (accessible on dark) */
+      --accent: #66d9ef;      /* cyan for links/accents */
+      --accent-2: #a78bfa;    /* soft purple for headings */
+      --accent-3: #f59e0b;    /* amber for highlights */
+      --accent-4: #34d399;    /* green for success tags */
+      --accent-5: #f43f5e;    /* pink/red for warnings */
+
+      /* Gradients and borders */
+      --grad-1: linear-gradient(135deg, rgba(102,217,239,0.18), rgba(167,139,250,0.18));
+      --grad-2: linear-gradient(135deg, rgba(52,211,153,0.14), rgba(245,158,11,0.14));
+      --bd-strong: #2a3240;
+      --bd-soft: #222834;
+
+      /* Code/selection */
+      --code-bg: #10141b;
+      --sel: rgba(102,217,239,0.25);
+      --focus: 0 0 0 3px rgba(102,217,239,0.35), 0 0 0 1px rgba(102,217,239,0.5);
+      --ring: 0 0 0 1px var(--accent);
+
+      /* Typography */
+      --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
-    body {
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-0: #f7f8fa;
+        --bg-1: #ffffff;
+        --bg-2: #f0f2f6;
+        --bg-card: #ffffff;
+        --txt-0: #0f1720;
+        --txt-1: #1f2937;
+        --txt-2: #495469;
+        --muted: #647087;
+        --bd-strong: #d7dde8;
+        --bd-soft: #e6ebf3;
+        --code-bg: #f3f6fb;
+        --sel: rgba(167,139,250,0.25);
+        --elev-1: 0 10px 25px rgba(16,24,40,0.08);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.55;
+      padding: 0;
+      background: radial-gradient(1200px 800px at 15% -10%, rgba(102,217,239,0.08), transparent),
+                  radial-gradient(1000px 700px at 95% 10%, rgba(167,139,250,0.08), transparent),
+                  var(--bg-0);
+      color: var(--txt-1);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    header {
-      padding: 3rem 1rem 1rem;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin: 0 0 .5rem;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-    .byline {
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .lede {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-top: .25rem;
-    }
-    main {
-      padding: 1rem;
-      max-width: 860px;
-      margin: 0 auto 3rem;
-    }
-    section {
-      background: var(--card);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin: 1rem 0;
-    }
-    h2 {
-      font-size: 1.25rem;
-      margin: .25rem 0 .75rem;
-    }
-    ul {
-      margin: .5rem 0 .5rem 1.25rem;
-    }
-    li {
-      margin: .35rem 0;
-    }
-    .warn {
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      color: #b71c1c;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .85rem;
-    }
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--accent-contrast);
-      padding: .75rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-right: .75rem;
-      cursor: pointer;
-    }
-    .small {
-      font-size: .95rem;
-      color: var(--muted);
-    }
-    nav.small {
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    nav.small a {
+
+    ::selection { background: var(--sel); }
+
+    a {
       color: var(--accent);
       text-decoration: none;
-      margin-right: 12px;
     }
-    nav.small a:hover, nav.small a:focus {
-      text-decoration: underline;
-    }
-    footer {
-      border-top: 1px solid #eee;
-      padding: 1.5rem 1rem 3rem;
-      max-width: 860px;
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 900px;
       margin: 0 auto;
-      color: var(--muted);
-      font-size: .95rem;
+      padding: 88px 20px 48px;
     }
-    @media (max-width: 720px) {
-      .grid { grid-template-columns: 1fr; }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: linear-gradient(to bottom, rgba(15,17,21,0.9), rgba(15,17,21,0.6));
+      border-bottom: 1px solid var(--bd-soft);
+    }
+    .nav {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      box-shadow: 0 0 12px rgba(102,217,239,0.5);
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--txt-0);
+    }
+    .tag {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--txt-2);
+      background: rgba(167,139,250,0.12);
+      border: 1px solid rgba(167,139,250,0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    /* Title block */
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--txt-0);
+      background: linear-gradient(180deg, var(--txt-0), #cfd6dd 60%, #9aa4b2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Cards/sections */
+    .notice {
+      background: linear-gradient(180deg, rgba(244,63,94,0.12), rgba(244,63,94,0.06));
+      border: 1px solid rgba(244,63,94,0.35);
+      color: #ffd9e0;
+      padding: 18px 18px;
+      border-radius: 14px;
+      box-shadow: var(--elev-1);
+      margin: 26px 0 22px;
+    }
+    .notice strong { color: #ff8fa4; }
+
+    .card {
+      background: linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95)), var(--bg-card);
+      border: 1px solid var(--bd-soft);
+      border-radius: 16px;
+      box-shadow: var(--elev-1);
+      padding: 18px 18px;
+      margin: 18px 0;
+    }
+    .card.emph {
+      border: 1px solid var(--bd-strong);
+      background-image: var(--grad-1), linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95));
+    }
+    .card.alt {
+      background-image: var(--grad-2), linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95));
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent-2);
+      letter-spacing: 0.2px;
+    }
+
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--txt-0);
+    }
+
+    p { margin: 8px 0 0; color: var(--txt-1); }
+
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+    li { margin: 6px 0; }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--bd-soft);
+      color: var(--txt-1);
+      background: rgba(102,217,239,0.08);
+    }
+    .pill.warn {
+      background: rgba(244,63,94,0.12);
+      border-color: rgba(244,63,94,0.35);
+      color: #ffc0cb;
+    }
+    .pill.ok {
+      background: rgba(52,211,153,0.12);
+      border-color: rgba(52,211,153,0.35);
+      color: #c9ffe7;
+    }
+
+    .kbd {
+      font-family: var(--font-mono);
+      background: var(--code-bg);
+      border: 1px solid var(--bd-soft);
+      padding: 0.2em 0.45em;
+      border-radius: 6px;
+      font-size: 0.9em;
+      color: var(--txt-0);
+    }
+
+    /* Download / actions */
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--bd-soft);
+      background: linear-gradient(180deg, #1f2530, #171b24);
+      color: var(--txt-0);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: transform .05s ease, box-shadow .15s ease, background .2s ease;
+      box-shadow: var(--elev-1);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+      text-decoration: none;
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(102,217,239,0.2), rgba(167,139,250,0.2));
+      border-color: rgba(102,217,239,0.5);
+    }
+    .btn.warn {
+      background: linear-gradient(135deg, rgba(244,63,94,0.22), rgba(245,158,11,0.22));
+      border-color: rgba(244,63,94,0.5);
+    }
+
+    /* Footer meta */
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+    @media (max-width: 640px) {
+      .meta-grid { grid-template-columns: 1fr; }
+      .container { padding-top: 76px; }
+    }
+
+    /* Accessibility focus */
+    :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 8px; }
+
+    /* Prose adjustments */
+    .lead {
+      color: var(--txt-1);
+      font-size: 15px;
+    }
+    .muted { color: var(--muted); }
+    hr {
+      border: 0; height: 1px; background: var(--bd-soft);
+      margin: 22px 0;
+    }
+
+    /* Small label row */
+    .labels {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>N‑Methyl‑Cyclazodone (NMC)</h1>
-    <div class="byline">A pharmacological and toxicological assessment • By <strong>Gemini Deep Research</strong></div>
-    <p class="lede">Concise overview of a novel psychoactive stimulant analogue of Cyclazodone. Includes analytical methods, inferred mechanism, key risks, legal context, and link to the full report.</p>
-
-    <!-- New: Table of Contents navigation for SEO and UX -->
-    <nav aria-label="Contents" class="small">
-      <a href="#safety">Safety</a>
-      <a href="#highlights">Executive highlights</a>
-      <a href="#methods">Analytical methods</a>
-      <a href="#identifiers">Identifiers</a>
-      <a href="#legal">Legal and safety context</a>
-      <a href="#download">Download PDF</a>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brand">N‑Methyl‑Cyclazodone (NMC)</span>
+      <span class="tag">Research report</span>
     </nav>
-
-    <!-- New: Text anchor for PDF for SEO -->
-    <p>
-      Download the full report: 
-      <a href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf">
-        N‑Methyl‑Cyclazodone (NMC): Pharmacological and Toxicological Assessment (PDF)
-      </a>
-    </p>
   </header>
 
-  <main>
-    <section id="safety" class="warn">
+  <main class="container" role="main">
+    <h1>N‑Methyl‑Cyclazodone: Pharmacological and Toxicological Assessment</h1>
+    <p class="meta">
+      Version 1.0 • Last updated: 2025‑08‑21 • Author: Tamás Arany • Gemini Deep Research • Contact: pharmacology@catom.dev
+    </p>
+
+    <section class="notice" aria-label="Critical safety notice">
       <h2>Critical safety notice</h2>
       <p>
-        N‑Methyl‑Cyclazodone (NMC) may pose a risk of severe, idiosyncratic hepatotoxicity consistent with its oxazolidinone class lineage (e.g., pemoline). Acute toxicity has included multi‑system effects in a documented case. Content is provided for research and public health awareness; it is not medical advice.
+        <strong>N‑Methyl‑Cyclazodone (NMC)</strong> may pose a risk of severe, idiosyncratic hepatotoxicity consistent with its oxazolidinone class lineage (e.g., pemoline). Acute toxicity has included multi‑system effects in a documented case. Content is provided for research and public health awareness; it is not medical advice.
       </p>
+      <div class="labels" aria-label="risk tags">
+        <span class="pill warn">Hepatotoxicity risk</span>
+        <span class="pill">Oxazolidinone class</span>
+        <span class="pill">Idiosyncratic injury</span>
+      </div>
     </section>
 
-    <section id="highlights">
-      <h2>Executive highlights</h2>
+    <section class="card emph" aria-labelledby="exec">
+      <h2 id="exec">Executive highlights</h2>
       <ul>
-        <li>Compound: N‑Methyl‑Cyclazodone (NMC), an oxazolidinone stimulant and analogue of Cyclazodone.</li>
-        <li>Use context: Discussed online as a functional stimulant/nootropic; unscheduled “research chemical” status in many jurisdictions.</li>
-        <li>Mechanism (inferred): Catecholaminergic stimulant activity involving DAT/NET reuptake inhibition and/or release; N‑demethylation to Cyclazodone observed in human case analysis.</li>
-        <li>Primary risk: Potential for rare but severe, unpredictable liver injury (idiosyncratic hepatotoxicity), analogous to pemoline’s risk profile.</li>
-        <li>Acute toxicity: Documented overdose presented with severe sympathomimetic features, neurological toxicity (choreoathetosis), ECG conduction abnormalities, rhabdomyolysis, and acute liver injury.</li>
-        <li>Interactions: Likely CYP-mediated metabolism; inhibitors (e.g., certain antidepressants) may elevate exposure and risk.</li>
-        <li>Legal context: Often unscheduled but may fall under analogue/psychoactive laws; monitored within EU EWS; UK covers under Psychoactive Substances Act.</li>
+        <li><strong>Compound:</strong> N‑Methyl‑Cyclazodone (NMC), an oxazolidinone stimulant and analogue of Cyclazodone.</li>
+        <li><strong>Use context:</strong> Discussed online as a functional stimulant/nootropic; unscheduled “research chemical” status in many jurisdictions.</li>
+        <li><strong>Mechanism (inferred):</strong> Catecholaminergic stimulant activity involving DAT/NET reuptake inhibition and/or release; N‑demethylation to Cyclazodone observed in human case analysis.</li>
+        <li><strong>Primary risk:</strong> Potential for rare but severe, unpredictable liver injury (idiosyncratic hepatotoxicity), analogous to pemoline’s risk profile.</li>
+        <li><strong>Acute toxicity:</strong> Documented overdose presented with severe sympathomimetic features, neurological toxicity (choreoathetosis), ECG conduction abnormalities, rhabdomyolysis, and acute liver injury.</li>
+        <li><strong>Interactions:</strong> Likely CYP‑mediated metabolism; inhibitors (e.g., certain antidepressants) may elevate exposure and risk.</li>
+        <li><strong>Legal context:</strong> Often unscheduled but may fall under analogue/psychoactive laws; monitored within EU EWS; UK covers under Psychoactive Substances Act.</li>
       </ul>
     </section>
 
-    <section id="methods" class="grid">
-      <div>
-        <h2>Analytical methods</h2>
-        <ul>
-          <li>Identity: LC‑MS</li>
-          <li>Purity: HPLC‑UV</li>
-          <li>Purity caveat: “% area by UV” differs from assay by weight; vendor claims may not reflect absolute content.</li>
-        </ul>
-      </div>
-      <div id="identifiers">
-        <h2>Identifiers</h2>
-        <ul>
-          <li>Common names: N‑Methyl‑Cyclazodone, NMC</li>
-          <li>CAS: 14461‑92‑8</li>
-          <li>PubChem CID: 156614124</li>
-          <li>Class: 5‑phenyl‑4‑oxazolidinone stimulant</li>
-        </ul>
+    <section class="card" aria-labelledby="methods">
+      <h2 id="methods">Analytical methods</h2>
+      <ul>
+        <li><strong>Identity:</strong> LC‑MS</li>
+        <li><strong>Purity:</strong> HPLC‑UV</li>
+        <li><strong>Purity caveat:</strong> “% area by UV” differs from assay by weight; vendor claims may not reflect absolute content.</li>
+      </ul>
+    </section>
+
+    <section class="card alt" aria-labelledby="identifiers">
+      <h2 id="identifiers">Identifiers</h2>
+      <ul>
+        <li><strong>Common names:</strong> N‑Methyl‑Cyclazodone, NMC</li>
+        <li><strong>CAS:</strong> 14461‑92‑8</li>
+        <li><strong>PubChem CID:</strong> 156614124</li>
+        <li><strong>Class:</strong> 5‑phenyl‑4‑oxazolidinone stimulant</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="legal">
+      <h2 id="legal">Legal and safety context (brief)</h2>
+      <p class="lead">
+        NMC is generally not explicitly scheduled in many jurisdictions but may be controlled under analogue or psychoactive‑substance laws. EU Early Warning System has recorded related notifications; the UK’s Psychoactive Substances Act broadly prohibits supply for human consumption. Availability, labeling, and compliance vary. This report does not provide legal advice.
+      </p>
+      <div class="labels">
+        <span class="pill">EU EWS</span>
+        <span class="pill">Analogue provisions</span>
+        <span class="pill">PSA (UK)</span>
       </div>
     </section>
 
-    <section id="legal">
-      <h2>Legal and safety context (brief)</h2>
-      <p class="small">
-        NMC is generally not explicitly scheduled in many jurisdictions but may be controlled under analogue or psychoactive-substance laws. EU Early Warning System has recorded related notifications; the UK’s Psychoactive Substances Act broadly prohibits supply for human consumption. Availability, labeling, and compliance vary. This report does not provide legal advice.
-      </p>
+    <section class="card emph" aria-labelledby="download">
+      <h2 id="download">Download the full report (PDF)</h2>
+      <p>The PDF provides detailed pharmacology, toxicology, case analysis, SAR rationale, and regulatory review.</p>
+      <div class="actions">
+        <a class="btn primary" href="#" role="button" aria-label="Download PDF">
+          <!-- You can replace with actual icon SVGs if desired -->
+          ⬇️ Download PDF
+        </a>
+        <a class="btn" href="#" role="button" aria-label="View PDF in browser">
+          👁️ View in browser
+        </a>
+        <span class="pill ok">Updated: 2025‑08‑21</span>
+      </div>
     </section>
 
-    <section id="download">
-      <h2>Download the full report (PDF)</h2>
-      <p>
-        The PDF provides detailed pharmacology, toxicology, case analysis, SAR rationale, and regulatory review.
-      </p>
-      <p>
-        <a class="button" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" download>Download PDF</a>
-        <a class="button" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener">View in browser</a>
-      </p>
-      <p class="small">
-        Title: N‑Methyl‑Cyclazodone: A Pharmacological and Toxicological Assessment of a Novel Psychoactive Stimulant<br/>
-        Version: 1.0 • Last updated: 2025‑08‑21<br/>
-        Author: Tamás Arany • Gemini Deep Research • Contact: pharmacology@catom.dev
-      </p>
-    </section>
+    <footer class="footer" role="contentinfo" aria-label="Document metadata">
+      <div class="meta-grid">
+        <div><strong>Title:</strong> N‑Methyl‑Cyclazodone: A Pharmacological and Toxicological Assessment of a Novel Psychoactive Stimulant</div>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><strong>Author:</strong> Tamás Arany</div>
+        <div><strong>Contact:</strong> <span class="kbd">pharmacology@catom.dev</span></div>
+      </div>
+      <div class="muted">
+        This document is provided for research and public health awareness only. It is not medical or legal advice.
+      </div>
+    </footer>
   </main>
-
-  <footer>
-    <div>© <span id="year"></span> Gemini Deep Research. All rights reserved.</div>
-    <div class="small">This page is for research and educational purposes only. No medical or legal advice is provided.</div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
