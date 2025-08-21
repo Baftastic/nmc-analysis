@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baftastic.github.io/nmc-analysis/sitemap.xml
