@@ -285,7 +285,7 @@
       border-color: var(--accent-hover);
     }
 
-    /* NEW: Infographic Section */
+    /* Infographic Section */
     .infographic-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -339,6 +339,39 @@
     .meta-grid strong {
       color: var(--txt-1);
     }
+    
+    /* Tooltip Styles */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted var(--muted);
+      cursor: help;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 250px;
+      background-color: var(--bg-1);
+      color: var(--txt-1);
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -125px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      border: 1px solid var(--bd-strong);
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
 
     /* Responsive Adjustments */
     @media (max-width: 640px) {
@@ -369,7 +402,7 @@
     <section aria-label="Introduction">
         <h1>N-Methyl-Cyclazodone (NMC): A Warning</h1>
         <p class="meta">
-          Understanding the serious risks of this unregulated 'study drug', especially the danger of sudden liver failure.
+          Understanding the serious risks of this <span class="tooltip">unregulated 'study drug'<span class="tooltiptext">A substance sold online without government approval or safety testing, often misleadingly marketed for cognitive enhancement.</span></span>, especially the danger of sudden liver failure.
         </p>
     </section>
 
@@ -381,7 +414,7 @@
       <details>
         <summary>Why is the liver risk so high?</summary>
         <div class="details-content">
-          <p>This warning is based on the history of <strong>Pemoline</strong>, a very similar drug once used for ADHD. Pemoline was banned after it was linked to at least 21 cases of liver failure, 13 of which resulted in death or required an emergency liver transplant. The liver damage was <strong>idiosyncratic</strong>, meaning it was unpredictable, not related to the dose, and could happen after months of seemingly safe use. Routine blood tests could not reliably predict who was at risk.</p>
+          <p>This warning is based on the history of <strong>Pemoline</strong>, a very similar drug once used for ADHD. Pemoline was banned after it was linked to at least 21 cases of liver failure, 13 of which resulted in death or required an emergency liver transplant. The liver damage was <span class="tooltip"><strong>idiosyncratic</strong><span class="tooltiptext">An unusual and unpredictable reaction to a drug that occurs in a small percentage of people. It is not related to the dose.</span></span>, meaning it was unpredictable, not related to the dose, and could happen after months of seemingly safe use. Routine blood tests could not reliably predict who was at risk.</p>
         </div>
       </details>
     </section>
@@ -389,7 +422,7 @@
     <section class="danger" aria-label="Critical drug interaction warning">
       <h2>Danger: Interacts With Common Medications</h2>
       <p>
-        Mixing NMC with other drugs can be extremely dangerous. A documented case showed that taking NMC while on a common antidepressant (like an SSRI) led to a life-threatening overdose. The combination can cause the body to be unable to process the drug, leading to toxic levels in your system. <strong>Do not mix NMC with other medications. Examples include Bupropion which inhibits CYP2D6 for 5-6 days because of the long half life of its metabolites, Grapefruit and related foods containing CYP3 inhibitors.</strong>
+        Mixing NMC with other drugs can be extremely dangerous. A documented case showed that taking NMC while on a common antidepressant (like an <span class="tooltip">SSRI<span class="tooltiptext">Selective Serotonin Reuptake Inhibitors (e.g., Prozac, Zoloft) are a common class of antidepressants.</span></span>) led to a life-threatening overdose. The combination can cause the body to be unable to process the drug, leading to toxic levels in your system. <strong>Do not mix NMC with other medications. Examples include Bupropion which inhibits <span class="tooltip">CYP2D6<span class="tooltiptext">A crucial enzyme in the liver that breaks down and removes many drugs from the body. Blocking it can cause drugs to build up to toxic levels.</span></span> for 5-6 days because of the long half life of its metabolites, Grapefruit and related foods containing CYP3 inhibitors.</strong>
       </p>
        <details>
         <summary>How do these interactions happen?</summary>
@@ -405,7 +438,7 @@
       <div class="infographic-grid">
         <div class="info-card">
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-          <h3>The Pemoline Precedent</h3>
+          <h3>The <span class="tooltip">Pemoline Precedent<span class="tooltiptext">The historical case of a similar drug (Pemoline) that was banned due to causing deaths and liver transplants. This history serves as a strong warning for NMC.</span></span></h3>
           <p>NMC's chemical cousin, Pemoline, was banned after causing at least 21 cases of liver failure.</p>
           <p class="statistic">13</p>
           <p>resulted in death or required an emergency liver transplant.</p>
@@ -433,7 +466,7 @@
       <details>
         <summary>Is there a safe dose of NMC?</summary>
         <div class="details-content">
-          <p><strong>No.</strong> The most severe risk, liver failure, is 'idiosyncratic,' meaning it's unpredictable and not related to the dose. It can happen to a susceptible person at any dose, at any time. There is no known way to determine who is susceptible.</p>
+          <p><strong>No.</strong> The most severe risk, liver failure, is '<span class="tooltip">idiosyncratic<span class="tooltiptext">An unusual and unpredictable reaction to a drug that occurs in a small percentage of people. It is not related to the dose.</span></span>,' meaning it's unpredictable and not related to the dose. It can happen to a susceptible person at any dose, at any time. There is no known way to determine who is susceptible.</p>
         </div>
       </details>
       <details>
@@ -448,7 +481,7 @@
       <h2 id="exec">Key Dangers at a Glance</h2>
       <ul>
         <li><strong>What it is:</strong> An unregulated stimulant, chemically related to other drugs in a family known for causing severe side effects.</li>
-        <li><strong>How it's used:</strong> Often sold online as a 'research chemical' and used as a so-called 'smart drug' or for self-treating ADHD.</li>
+        <li><strong>How it's used:</strong> Often sold online as a '<span class="tooltip">research chemical<span class="tooltiptext">A substance sold for 'laboratory research' to bypass laws for human consumption. They have not undergone safety testing.</span></span>' and used as a so-called 'smart drug' or for self-treating ADHD.</li>
         <li><strong>The Biggest Danger:</strong> A risk of sudden, severe, and irreversible liver failure. A related drug was banned because it caused deaths and required liver transplants.</li>
         <li><strong>Overdose Effects:</strong> A documented overdose caused life-threatening effects, including dangerous heart problems, severe muscle breakdown, and brain and nerve damage.</li>
         <li><strong>Legality vs. Safety:</strong> The legal status is complex and varies. However, the severe, life-threatening health risks make any legal debate irrelevant. This substance should be avoided for safety reasons alone.</li>
@@ -458,12 +491,12 @@
     <section class="card" aria-labelledby="long-term-risks">
       <h2 id="long-term-risks">Long-Term Risks: Dependence and Withdrawal</h2>
       <p>
-        Beyond the immediate dangers, regular use of NMC carries a high risk of psychological dependence. Because it is a potent stimulant, your brain can adapt to its presence, leading to addiction. Stopping the drug after long-term use can cause a severe "crash," with symptoms like extreme fatigue, inability to feel pleasure, and deep depression. This makes it very difficult to quit.
+        Beyond the immediate dangers, regular use of NMC carries a high risk of <span class="tooltip">psychological dependence<span class="tooltiptext">An emotional or mental attachment to a drug, characterized by a strong craving and difficulty stopping use, even without physical withdrawal symptoms.</span></span>. Because it is a potent stimulant, your brain can adapt to its presence, leading to addiction. Stopping the drug after long-term use can cause a severe "crash," with symptoms like extreme fatigue, inability to feel pleasure, and deep depression. This makes it very difficult to quit.
       </p>
       <details>
         <summary>Learn more about dependence</summary>
         <div class="details-content">
-          <p>Stimulants like NMC increase dopamine in the brain, which is linked to motivation and reward. With long-term use, the brain reduces its own dopamine production to compensate. This leads to <strong>tolerance</strong> (needing more of the drug for the same effect) and <strong>withdrawal</strong> when the drug is stopped. The withdrawal syndrome is characterized by a deep lack of motivation and pleasure (anhedonia), which creates a powerful craving to use the drug again.</p>
+          <p>Stimulants like NMC increase <span class="tooltip">dopamine<span class="tooltiptext">A neurotransmitter in the brain associated with motivation, pleasure, and reward. Many addictive drugs work by increasing dopamine levels.</span></span> in the brain, which is linked to motivation and reward. With long-term use, the brain reduces its own dopamine production to compensate. This leads to <strong>tolerance</strong> (needing more of the drug for the same effect) and <strong>withdrawal</strong> when the drug is stopped. The withdrawal syndrome is characterized by a deep lack of motivation and pleasure (<span class="tooltip">anhedonia<span class="tooltiptext">The inability to feel pleasure from activities usually found enjoyable. It is a core symptom of depression and withdrawal from stimulant drugs.</span></span>), which creates a powerful craving to use the drug again.</p>
         </div>
       </details>
     </section>
