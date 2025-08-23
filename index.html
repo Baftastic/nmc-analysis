@@ -7,7 +7,7 @@
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="A public health warning about the serious dangers of N-Methyl-Cyclazodone (NMC), an unregulated stimulant. Learn about the critical risk of sudden liver failure, dangerous drug interactions, and other health hazards." />
-  <meta name="keywords" content="N-Methyl-Cyclazodone, NMC, cyclazodone, pemoline, stimulant, nootropic, research chemical, liver damage, hepatotoxicity, harm reduction, public health" />
+  <meta name="keywords" content="N-Methyl-Cyclazodone, NMC, cyclazodone, pemoline, stimulant, nootropic, research chemical, liver damage, hepatotoxicity, harm reduction, public health, NMC side effects, Is Cyclazodone safe, Pemoline alternatives, Nootropics liver damage" />
   <link rel="canonical" href="https://baftastic.github.io/nmc-analysis/" />
 
   <!-- Open Graph / Social Media Meta Tags -->
@@ -285,6 +285,43 @@
       border-color: var(--accent-hover);
     }
 
+    /* NEW: Infographic Section */
+    .infographic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .info-card {
+      background: var(--bg-1);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--bd-soft);
+      text-align: center;
+    }
+    .info-card .icon {
+      margin: 0 auto 12px;
+      width: 48px;
+      height: 48px;
+      color: var(--accent);
+    }
+    .info-card h3 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      color: var(--txt-0);
+    }
+    .info-card p {
+      font-size: 0.9rem;
+      margin: 0;
+      color: var(--txt-1);
+    }
+    .info-card .statistic {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--danger);
+      line-height: 1.2;
+    }
+
     /* Footer */
     .footer {
       margin-top: 32px;
@@ -358,6 +395,51 @@
         <summary>How do these interactions happen?</summary>
         <div class="details-content">
           <p>Your body uses enzymes, particularly one called <strong>CYP2D6</strong>, to break down and remove drugs like NMC. Many common medications, including antidepressants like Fluoxetine (Prozac) and Bupropion (Wellbutrin), act as powerful inhibitors of this enzyme. When the enzyme is blocked, your body cannot clear NMC effectively. This causes the drug to build up to dangerously high, toxic levels, turning a normal dose into a life-threatening overdose.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- NEW: INFOGRAPHIC SECTION -->
+    <section class="card" aria-labelledby="infographic-title">
+      <h2 id="infographic-title">The Three Critical Dangers</h2>
+      <div class="infographic-grid">
+        <div class="info-card">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <h3>The Pemoline Precedent</h3>
+          <p>NMC's chemical cousin, Pemoline, was banned after causing at least 21 cases of liver failure.</p>
+          <p class="statistic">13</p>
+          <p>resulted in death or required an emergency liver transplant.</p>
+        </div>
+        <div class="info-card">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          <h3>Dangerous Interactions</h3>
+          <p>Common antidepressants (SSRIs, Wellbutrin) can block the enzyme that removes NMC from your body.</p>
+          <p class="statistic">TOXIC</p>
+          <p>This leads to a rapid, life-threatening buildup of the drug in your system.</p>
+        </div>
+        <div class="info-card">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <h3>Unpredictable Risk</h3>
+          <p>Liver failure is not dose-dependent. It's a rare but catastrophic event that can happen to anyone at any time.</p>
+          <p class="statistic">NO</p>
+          <p>There is no known "safe" dose or way to predict who is vulnerable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: FAQ SECTION -->
+    <section class="card" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <details>
+        <summary>Is there a safe dose of NMC?</summary>
+        <div class="details-content">
+          <p><strong>No.</strong> The most severe risk, liver failure, is 'idiosyncratic,' meaning it's unpredictable and not related to the dose. It can happen to a susceptible person at any dose, at any time. There is no known way to determine who is susceptible.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I just monitor my liver with blood tests?</summary>
+        <div class="details-content">
+          <p><strong>This is not a reliable strategy.</strong> With the related drug Pemoline, liver failure sometimes occurred so rapidly that it happened between routine tests. In some of the fatal cases, patients had shown normal liver enzyme levels on previous tests before suddenly developing catastrophic liver failure.</p>
         </div>
       </details>
     </section>
