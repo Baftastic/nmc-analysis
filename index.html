@@ -3,76 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>N‑Methyl‑Cyclazodone (NMC) • Pharmacological and Toxicological Assessment</title>
-  <meta name="color-scheme" content="dark light">
+  <title>N‑Methyl‑Cyclazodone (NMC) • A Public Health Warning</title>
+  <meta name="color-scheme" content="dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* * XFCE (Greybird-dark) Inspired Theme 
+     * This theme uses a palette of charcoal grays and a classic accent blue
+     * to create a professional, focused, and clean appearance.
+     */
     :root {
-      /* Base dark theme */
-      --bg-0: #0f1115;
-      --bg-1: #13161c;
-      --bg-2: #1a1f27;
-      --bg-card: #171a21;
-      --elev-1: 0 6px 20px rgba(0,0,0,0.35);
+      /* Base dark theme inspired by XFCE/Greybird */
+      --bg-0: #2e3436; /* Dark charcoal main background */
+      --bg-1: #353a3c; /* Slightly lighter background */
+      --bg-card: #3c4143; /* Card and element background */
+      --elev-1: 0 4px 12px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.2);
 
-      /* Text */
-      --txt-0: #e9edf1;
-      --txt-1: #c9d1d9;
-      --txt-2: #9aa4b2;
-      --muted: #7f8a99;
+      /* Text colors for high contrast and readability */
+      --txt-0: #eeeeec; /* Primary text (headings) */
+      --txt-1: #d3d7cf; /* Secondary text (body) */
+      --muted: #babdb6; /* Muted/metadata text */
 
-      /* Accent palette (accessible on dark) */
-      --accent: #66d9ef;      /* cyan for links/accents */
-      --accent-2: #a78bfa;    /* soft purple for headings */
-      --accent-3: #f59e0b;    /* amber for highlights */
-      --accent-4: #34d399;    /* green for success tags */
-      --accent-5: #f43f5e;    /* pink/red for warnings */
+      /* Classic XFCE blue accent palette */
+      --accent: #729fcf;      /* Main accent blue for links, buttons */
+      --accent-hover: #8cc0ff; /* Lighter blue for hover states */
+      --warning: #f57900;     /* Orange for notices */
+      --warning-bg: rgba(245, 121, 0, 0.1);
+      --warning-border: rgba(245, 121, 0, 0.4);
+      --danger: #cc0000;      /* Red for critical danger */
+      --danger-bg: rgba(204, 0, 0, 0.1);
+      --danger-border: rgba(204, 0, 0, 0.4);
+      --success: #8ae234;     /* Green for success tags */
+      --success-bg: rgba(138, 226, 52, 0.1);
+      --success-border: rgba(138, 226, 52, 0.4);
 
-      /* Gradients and borders */
-      --grad-1: linear-gradient(135deg, rgba(102,217,239,0.18), rgba(167,139,250,0.18));
-      --grad-2: linear-gradient(135deg, rgba(52,211,153,0.14), rgba(245,158,11,0.14));
-      --bd-strong: #2a3240;
-      --bd-soft: #222834;
+      /* Borders and UI elements */
+      --bd-strong: #555753;
+      --bd-soft: #4a4f51;
 
-      /* Code/selection */
-      --code-bg: #10141b;
-      --sel: rgba(102,217,239,0.25);
-      --focus: 0 0 0 3px rgba(102,217,239,0.35), 0 0 0 1px rgba(102,217,239,0.5);
-      --ring: 0 0 0 1px var(--accent);
+      /* Code, selection, and focus styles */
+      --code-bg: #2a2f30;
+      --sel: rgba(114, 159, 207, 0.25);
+      --focus: 0 0 0 3px rgba(114, 159, 207, 0.35);
 
       /* Typography */
-      --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
 
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg-0: #f7f8fa;
-        --bg-1: #ffffff;
-        --bg-2: #f0f2f6;
-        --bg-card: #ffffff;
-        --txt-0: #0f1720;
-        --txt-1: #1f2937;
-        --txt-2: #495469;
-        --muted: #647087;
-        --bd-strong: #d7dde8;
-        --bd-soft: #e6ebf3;
-        --code-bg: #f3f6fb;
-        --sel: rgba(167,139,250,0.25);
-        --elev-1: 0 10px 25px rgba(16,24,40,0.08);
-      }
-    }
-
+    /* Basic Reset & Body Styling */
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(1200px 800px at 15% -10%, rgba(102,217,239,0.08), transparent),
-                  radial-gradient(1000px 700px at 95% 10%, rgba(167,139,250,0.08), transparent),
-                  var(--bg-0);
+      background-color: var(--bg-0);
       color: var(--txt-1);
       font-family: var(--font-sans);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -82,144 +71,154 @@
     a {
       color: var(--accent);
       text-decoration: none;
+      transition: color 0.15s ease;
     }
-    a:hover { text-decoration: underline; }
+    a:hover { 
+      color: var(--accent-hover);
+      text-decoration: underline; 
+    }
 
+    /* Main Content Container */
     .container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 88px 20px 48px;
+      padding: 80px 20px 40px;
     }
 
-    /* Header */
+    /* Sticky Header */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: saturate(140%) blur(8px);
-      background: linear-gradient(to bottom, rgba(15,17,21,0.9), rgba(15,17,21,0.6));
+      backdrop-filter: saturate(120%) blur(8px);
+      -webkit-backdrop-filter: saturate(120%) blur(8px);
+      background: rgba(46, 52, 54, 0.8);
       border-bottom: 1px solid var(--bd-soft);
     }
     .nav {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
     .dot {
       width: 10px; height: 10px; border-radius: 50%;
-      background: conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
-      box-shadow: 0 0 12px rgba(102,217,239,0.5);
+      background-color: var(--accent);
+      box-shadow: 0 0 10px rgba(114, 159, 207, 0.5);
     }
     .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
+      font-weight: 600;
+      font-size: 1.05rem;
       color: var(--txt-0);
     }
     .tag {
       margin-left: auto;
-      font-size: 12px;
-      color: var(--txt-2);
-      background: rgba(167,139,250,0.12);
-      border: 1px solid rgba(167,139,250,0.35);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--txt-1);
+      background: var(--bg-1);
+      border: 1px solid var(--bd-soft);
       padding: 4px 10px;
       border-radius: 999px;
     }
 
-    /* Title block */
+    /* Typography */
     h1 {
-      margin: 0 0 10px;
-      font-size: 28px;
+      margin: 0 0 8px;
+      font-size: 2.25rem;
       font-weight: 800;
-      letter-spacing: 0.2px;
+      letter-spacing: -0.04em;
       color: var(--txt-0);
-      background: linear-gradient(180deg, var(--txt-0), #cfd6dd 60%, #9aa4b2);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
     }
     .meta {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.9rem;
     }
-
-    /* Cards/sections */
-    .notice {
-      background: linear-gradient(180deg, rgba(244,63,94,0.12), rgba(244,63,94,0.06));
-      border: 1px solid rgba(244,63,94,0.35);
-      color: #ffd9e0;
-      padding: 18px 18px;
-      border-radius: 14px;
-      box-shadow: var(--elev-1);
-      margin: 26px 0 22px;
-    }
-    .notice strong { color: #ff8fa4; }
-
-    .card {
-      background: linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95)), var(--bg-card);
-      border: 1px solid var(--bd-soft);
-      border-radius: 16px;
-      box-shadow: var(--elev-1);
-      padding: 18px 18px;
-      margin: 18px 0;
-    }
-    .card.emph {
-      border: 1px solid var(--bd-strong);
-      background-image: var(--grad-1), linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95));
-    }
-    .card.alt {
-      background-image: var(--grad-2), linear-gradient(180deg, rgba(26,31,39,0.9), rgba(23,26,33,0.95));
-    }
-
     h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--accent-2);
-      letter-spacing: 0.2px;
-    }
-
-    h3 {
-      margin: 14px 0 6px;
-      font-size: 16px;
+      margin: 0 0 12px;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--txt-0);
+      letter-spacing: -0.02em;
     }
-
-    p { margin: 8px 0 0; color: var(--txt-1); }
-
+    h3 {
+      margin: 16px 0 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--txt-0);
+    }
+    p { margin: 8px 0 0; }
     ul {
-      margin: 8px 0 0 18px;
-      padding: 0;
+      margin: 8px 0 0;
+      padding-left: 20px;
     }
-    li { margin: 6px 0; }
+    li { margin: 6px 0; padding-left: 4px; }
+    li::marker { color: var(--accent); }
 
+    /* Cards & Sections */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--bd-soft);
+      border-radius: 12px;
+      box-shadow: var(--elev-1);
+      padding: 24px;
+      margin: 24px 0;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--bd-strong);
+    }
+
+    /* Special Notice Card */
+    .notice {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      color: var(--txt-1);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--elev-1);
+      margin: 32px 0;
+    }
+    .notice h2 { color: var(--warning); }
+    .notice strong { color: var(--warning); font-weight: 600; }
+
+    /* Danger Notice Card */
+    .danger {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      color: var(--txt-1);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--elev-1);
+      margin: 24px 0;
+    }
+    .danger h2 { color: var(--danger); }
+    .danger strong { color: var(--danger); font-weight: 600; }
+
+
+    /* Pills / Tags */
     .pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 50px;                 /* Match the button height */
-      padding: 0 18px;              /* Symmetric horizontal padding */
+      display: inline-block;
+      padding: 4px 12px;
       border-radius: 999px;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
       border: 1px solid var(--bd-soft);
       color: var(--txt-1);
-      background: rgba(102,217,239,0.10); /* subtle background */
-      font-weight: 500;
-      box-sizing: border-box;
-      margin-left: 8px;
+      background: var(--bg-1);
     }
     .pill.warn {
-      background: rgba(244,63,94,0.12);
-      border-color: rgba(244,63,94,0.35);
-      color: #ffc0cb;
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning);
     }
     .pill.ok {
-      background: rgba(52,211,153,0.18);
-      border-color: rgba(52,211,153,0.35);
-      color: #c9ffe7;
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
     }
 
     .kbd {
@@ -232,82 +231,77 @@
       color: var(--txt-0);
     }
 
-    /* Download / actions */
+    /* Action Buttons */
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 12px;
+      margin-top: 16px;
     }
     .btn {
       appearance: none;
-      border: 1px solid var(--bd-soft);
-      background: linear-gradient(180deg, #1f2530, #171b24);
+      border: 1px solid var(--bd-strong);
+      background-color: var(--bg-1);
       color: var(--txt-0);
-      padding: 10px 14px;
-      border-radius: 12px;
+      padding: 10px 18px;
+      border-radius: 8px;
       font-weight: 600;
-      transition: transform .05s ease, box-shadow .15s ease, background .2s ease;
-      box-shadow: var(--elev-1);
+      transition: all .15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      background-color: var(--bg-card);
+      border-color: var(--muted);
       text-decoration: none;
     }
     .btn.primary {
-      background: linear-gradient(135deg, rgba(102,217,239,0.2), rgba(167,139,250,0.2));
-      border-color: rgba(102,217,239,0.5);
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #111;
     }
-    .btn.warn {
-      background: linear-gradient(135deg, rgba(244,63,94,0.22), rgba(245,158,11,0.22));
-      border-color: rgba(244,63,94,0.5);
+    .btn.primary:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
     }
 
-    /* Footer meta */
+    /* Footer */
     .footer {
-      margin-top: 18px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--bd-soft);
       color: var(--muted);
-      font-size: 13px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
+      font-size: 0.85rem;
     }
     .meta-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto 1fr;
       gap: 8px 16px;
+      margin-bottom: 16px;
     }
-    @media (max-width: 640px) {
-      .meta-grid { grid-template-columns: 1fr; }
-      .container { padding-top: 76px; }
-    }
-
-    /* Accessibility focus */
-    :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 8px; }
-
-    /* Prose adjustments */
-    .lead {
+    .meta-grid strong {
       color: var(--txt-1);
-      font-size: 15px;
-    }
-    .muted { color: var(--muted); }
-    hr {
-      border: 0; height: 1px; background: var(--bd-soft);
-      margin: 22px 0;
     }
 
-    /* Small label row */
-    .labels {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 8px;
+    /* Responsive Adjustments */
+    @media (max-width: 640px) {
+      .container { padding-top: 72px; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
+      .meta-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Accessibility */
+    :focus-visible { 
+        outline: none; 
+        box-shadow: var(--focus); 
+        border-radius: 6px; 
     }
   </style>
 </head>
@@ -315,98 +309,76 @@
   <header class="site-header" role="banner">
     <nav class="nav" aria-label="Primary">
       <span class="dot" aria-hidden="true"></span>
-      <span class="brand">N‑Methyl‑Cyclazodone (NMC)</span>
-      <span class="tag">Research report</span>
+      <span class="brand">NMC Public Health Warning</span>
+      <span class="tag">Harm Reduction</span>
     </nav>
   </header>
 
   <main class="container" role="main">
-    <h1>N‑Methyl‑Cyclazodone: Pharmacological and Toxicological Assessment</h1>
-    <p class="meta">
-      Version 1.0 • Last updated: 2025‑08‑21 • Author: Tamás Arany • Gemini Deep Research • Contact: pharmacology@catom.dev
-    </p>
+    <section aria-label="Introduction">
+        <h1>N-Methyl-Cyclazodone (NMC): A Warning</h1>
+        <p class="meta">
+          Understanding the serious risks of this unregulated 'study drug', especially the danger of sudden liver failure.
+        </p>
+    </section>
 
     <section class="notice" aria-label="Critical safety notice">
-      <h2>Critical safety notice</h2>
+      <h2>A Serious Warning About Your Liver</h2>
       <p>
-        <strong>N‑Methyl‑Cyclazodone (NMC)</strong> may pose a risk of severe, idiosyncratic hepatotoxicity consistent with its oxazolidinone class lineage (e.g., pemoline). Acute toxicity has included multi‑system effects in a documented case. Content is provided for research and public health awareness; it is not medical advice.
+        The most dangerous risk of using <strong>N‑Methyl‑Cyclazodone (NMC)</strong> is sudden, unpredictable, and potentially fatal liver failure. This is not a common side effect, but a rare catastrophe that can happen without warning. Because it belongs to a chemical family known for causing liver damage, this risk must be taken seriously.
       </p>
-      <div class="labels" aria-label="risk tags">
-        <span class="pill warn">Hepatotoxicity risk</span>
-        <span class="pill">Oxazolidinone class</span>
-        <span class="pill">Idiosyncratic injury</span>
-      </div>
     </section>
 
-    <section class="card emph" aria-labelledby="exec">
-      <h2 id="exec">Executive highlights</h2>
-      <ul>
-        <li><strong>Compound:</strong> N‑Methyl‑Cyclazodone (NMC), an oxazolidinone stimulant and analogue of Cyclazodone.</li>
-        <li><strong>Use context:</strong> Discussed online as a functional stimulant/nootropic; unscheduled “research chemical” status in many jurisdictions.</li>
-        <li><strong>Mechanism (inferred):</strong> Catecholaminergic stimulant activity involving DAT/NET reuptake inhibition and/or release; N‑demethylation to Cyclazodone observed in human case analysis.</li>
-        <li><strong>Primary risk:</strong> Potential for rare but severe, unpredictable liver injury (idiosyncratic hepatotoxicity), analogous to pemoline’s risk profile.</li>
-        <li><strong>Acute toxicity:</strong> Documented overdose presented with severe sympathomimetic features, neurological toxicity (choreoathetosis), ECG conduction abnormalities, rhabdomyolysis, and acute liver injury.</li>
-        <li><strong>Interactions:</strong> Likely CYP‑mediated metabolism; inhibitors (e.g., certain antidepressants) may elevate exposure and risk.</li>
-        <li><strong>Legal context:</strong> Often unscheduled but may fall under analogue/psychoactive laws; monitored within EU EWS; UK covers under Psychoactive Substances Act.</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="methods">
-      <h2 id="methods">Analytical methods</h2>
-      <ul>
-        <li><strong>Identity:</strong> LC‑MS</li>
-        <li><strong>Purity:</strong> HPLC‑UV</li>
-        <li><strong>Purity caveat:</strong> “% area by UV” differs from assay by weight; vendor claims may not reflect absolute content.</li>
-      </ul>
-    </section>
-
-    <section class="card alt" aria-labelledby="identifiers">
-      <h2 id="identifiers">Identifiers</h2>
-      <ul>
-        <li><strong>Common names:</strong> N‑Methyl‑Cyclazodone, NMC</li>
-        <li><strong>CAS:</strong> 14461‑92‑8</li>
-        <li><strong>PubChem CID:</strong> 156614124</li>
-        <li><strong>Class:</strong> 5‑phenyl‑4‑oxazolidinone stimulant</li>
-      </ul>
-    </section>
-
-    <section class="card" aria-labelledby="legal">
-      <h2 id="legal">Legal and safety context (brief)</h2>
-      <p class="lead">
-        NMC is generally not explicitly scheduled in many jurisdictions but may be controlled under analogue or psychoactive‑substance laws. EU Early Warning System has recorded related notifications; the UK’s Psychoactive Substances Act broadly prohibits supply for human consumption. Availability, labeling, and compliance vary. This report does not provide legal advice.
+    <section class="danger" aria-label="Critical drug interaction warning">
+      <h2>Danger: Interacts With Common Medications</h2>
+      <p>
+        Mixing NMC with other drugs can be extremely dangerous. A documented case showed that taking NMC while on a common antidepressant (like an SSRI) led to a life-threatening overdose. The combination can cause the body to be unable to process the drug, leading to toxic levels in your system. <strong>Do not mix NMC with other medications. Examples include Bupropion which inhibits CYP2D6 for 5-6 days because of the long half life of its metabolites, Grapefruit and related foods containing CYP3 inhibitors</strong>
       </p>
-      <div class="labels">
-        <span class="pill">EU EWS</span>
-        <span class="pill">Analogue provisions</span>
-        <span class="pill">PSA (UK)</span>
-      </div>
     </section>
 
-    <section class="card emph" aria-labelledby="download">
-      <h2 id="download">Download the full report (PDF)</h2>
-      <p>The PDF provides detailed pharmacology, toxicology, case analysis, SAR rationale, and regulatory review.</p>
+    <section class="card" aria-labelledby="exec">
+      <h2 id="exec">Key Dangers at a Glance</h2>
+      <ul>
+        <li><strong>What it is:</strong> An unregulated stimulant, chemically related to other drugs in a family known for causing severe side effects.</li>
+        <li><strong>How it's used:</strong> Often sold online as a 'research chemical' and used as a so-called 'smart drug' or for self-treating ADHD.</li>
+        <li><strong>The Biggest Danger:</strong> A risk of sudden, severe, and irreversible liver failure. A related drug was banned because it caused deaths and required liver transplants.</li>
+        <li><strong>Overdose Effects:</strong> A documented overdose caused life-threatening effects, including dangerous heart problems, severe muscle breakdown, and brain and nerve damage.</li>
+        <li><strong>Is it legal?:</strong> It exists in a legal gray area in many places, but is illegal to sell for human use in countries like the UK.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="identifiers">
+        <h2 id="identifiers">Chemical Information</h2>
+        <div class="meta-grid">
+            <strong>Common Names:</strong> <span>N‑Methyl‑Cyclazodone, NMC</span>
+            <strong>CAS Number:</strong> <span>14461‑92‑8</span>
+            <strong>Chemical Class:</strong> <span>5‑phenyl‑4‑oxazolidinone stimulant</span>
+        </div>
+    </section>
+
+    <section class="card" aria-labelledby="download">
+      <h2 id="download">Read the Full Scientific Report</h2>
+      <p>For a deep dive into the science, including detailed case studies and chemical analysis, you can download the complete PDF report.</p>
       <div class="actions">
         <a class="btn primary" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" role="button" aria-label="Download PDF">
-          <!-- You can replace with actual icon SVGs if desired -->
-          ⬇️ Download PDF
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download PDF
         </a>
-        <a class="btn primary" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener" role="button" aria-label="View PDF in browser">
-          👁️ View in browser
+        <a class="btn" href="./N-Methyl-Cyclazodone-Human-Use-Analysis.pdf" target="_blank" rel="noopener" role="button" aria-label="View PDF in browser">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          View in Browser
         </a>
-        <span class="pill ok">Updated: 2025‑08‑21</span>
       </div>
     </section>
 
     <footer class="footer" role="contentinfo" aria-label="Document metadata">
       <div class="meta-grid">
-        <div><strong>Title:</strong> N‑Methyl‑Cyclazodone: A Pharmacological and Toxicological Assessment of a Novel Psychoactive Stimulant</div>
-        <div><strong>Version:</strong> 1.0</div>
-        <div><strong>Author:</strong> Tamás Arany</div>
-        <div><strong>Contact:</strong> <span class="kbd">pharmacology@catom.dev</span></div>
+        <strong>Source:</strong> <span>Based on the report "N‑Methyl‑Cyclazodone: A Pharmacological and Toxicological Assessment"</span>
+        <strong>Contact:</strong> <span><a href="mailto:pharmacology@catom.dev">pharmacology@catom.dev</a></span>
       </div>
-      <div class="muted">
-        This document is provided for research and public health awareness only. It is not medical or legal advice.
-      </div>
+      <p class="muted">
+        This page is for public health awareness and harm reduction. It is not medical or legal advice. The software and associated documentation files are provided under the MIT License.
+      </p>
     </footer>
   </main>
 </body>
