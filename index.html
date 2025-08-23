@@ -210,38 +210,40 @@
     .danger h2 { color: var(--danger); }
     .danger strong { color: var(--danger); font-weight: 600; }
 
-
-    /* Pills / Tags */
-    .pill {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
+    /* Accordion / Dropdown Styling */
+    details {
+      margin-top: 16px;
+      background-color: rgba(0,0,0,0.15);
+      border-radius: 8px;
       border: 1px solid var(--bd-soft);
-      color: var(--txt-1);
-      background: var(--bg-1);
     }
-    .pill.warn {
-      background: var(--warning-bg);
-      border-color: var(--warning-border);
-      color: var(--warning);
-    }
-    .pill.ok {
-      background: var(--success-bg);
-      border-color: var(--success-border);
-      color: var(--success);
-    }
-
-    .kbd {
-      font-family: var(--font-mono);
-      background: var(--code-bg);
-      border: 1px solid var(--bd-soft);
-      padding: 0.2em 0.45em;
-      border-radius: 6px;
-      font-size: 0.9em;
+    summary {
+      padding: 12px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       color: var(--txt-0);
     }
+    summary::-webkit-details-marker { display: none; }
+    summary:after {
+      content: '›';
+      font-size: 1.8rem;
+      transform: rotate(90deg);
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+    details[open] > summary:after {
+      transform: rotate(-90deg);
+    }
+    .details-content {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--bd-soft);
+      font-size: 0.95rem;
+    }
+    .details-content p { margin-top: 12px; }
 
     /* Action Buttons */
     .actions {
@@ -339,6 +341,12 @@
       <p>
         The most dangerous risk of using <strong>N‑Methyl‑Cyclazodone (NMC)</strong> is sudden, unpredictable, and potentially fatal liver failure. This is not a common side effect, but a rare catastrophe that can happen without warning. Because it belongs to a chemical family known for causing liver damage, this risk must be taken seriously.
       </p>
+      <details>
+        <summary>Why is the liver risk so high?</summary>
+        <div class="details-content">
+          <p>This warning is based on the history of <strong>Pemoline</strong>, a very similar drug once used for ADHD. Pemoline was banned after it was linked to at least 21 cases of liver failure, 13 of which resulted in death or required an emergency liver transplant. The liver damage was <strong>idiosyncratic</strong>, meaning it was unpredictable, not related to the dose, and could happen after months of seemingly safe use. Routine blood tests could not reliably predict who was at risk.</p>
+        </div>
+      </details>
     </section>
 
     <section class="danger" aria-label="Critical drug interaction warning">
@@ -346,6 +354,12 @@
       <p>
         Mixing NMC with other drugs can be extremely dangerous. A documented case showed that taking NMC while on a common antidepressant (like an SSRI) led to a life-threatening overdose. The combination can cause the body to be unable to process the drug, leading to toxic levels in your system. <strong>Do not mix NMC with other medications. Examples include Bupropion which inhibits CYP2D6 for 5-6 days because of the long half life of its metabolites, Grapefruit and related foods containing CYP3 inhibitors.</strong>
       </p>
+       <details>
+        <summary>How do these interactions happen?</summary>
+        <div class="details-content">
+          <p>Your body uses enzymes, particularly one called <strong>CYP2D6</strong>, to break down and remove drugs like NMC. Many common medications, including antidepressants like Fluoxetine (Prozac) and Bupropion (Wellbutrin), act as powerful inhibitors of this enzyme. When the enzyme is blocked, your body cannot clear NMC effectively. This causes the drug to build up to dangerously high, toxic levels, turning a normal dose into a life-threatening overdose.</p>
+        </div>
+      </details>
     </section>
 
     <section class="card" aria-labelledby="exec">
@@ -364,6 +378,12 @@
       <p>
         Beyond the immediate dangers, regular use of NMC carries a high risk of psychological dependence. Because it is a potent stimulant, your brain can adapt to its presence, leading to addiction. Stopping the drug after long-term use can cause a severe "crash," with symptoms like extreme fatigue, inability to feel pleasure, and deep depression. This makes it very difficult to quit.
       </p>
+      <details>
+        <summary>Learn more about dependence</summary>
+        <div class="details-content">
+          <p>Stimulants like NMC increase dopamine in the brain, which is linked to motivation and reward. With long-term use, the brain reduces its own dopamine production to compensate. This leads to <strong>tolerance</strong> (needing more of the drug for the same effect) and <strong>withdrawal</strong> when the drug is stopped. The withdrawal syndrome is characterized by a deep lack of motivation and pleasure (anhedonia), which creates a powerful craving to use the drug again.</p>
+        </div>
+      </details>
     </section>
 
     <section class="card" aria-labelledby="identifiers">
